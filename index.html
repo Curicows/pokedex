@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+    <link href="assets/favicon.png" rel="icon" type="image/png">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #ffffff;
+        }
+        .pokemon-card {
+            background: #eef0ff;
+            border: 0;
+            border-radius: 18px;
+            box-shadow: 0 6px 24px rgba(17, 24, 39, 0.08);
+        }
+        .pokemon-type {
+            color: #22c55e;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+        .pokemon-id {
+            color: #111827;
+            font-weight: 800;
+        }
+        .pokemon-name {
+            color: #1f2a44;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border border-light-subtle border-left-0 border-right-0 border-top-0 border-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img alt="PokéDex" height="39" src="assets/img/logo.png">
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler cursor-pointer" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#">Pokédex</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-lg py-5">
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 col-lg-8">
+                <form class="d-flex justify-content-center" id="pokemon-search-form">
+                    <div class="pokemon-search position-relative w-100">
+                        <input
+                            aria-label="Buscar pokemon"
+                            autocomplete="off"
+                            class="form-control pokemon-search-input"
+                            id="pokemon-search-input"
+                            placeholder="Faça uma busca pelo nome do pokemon"
+                            type="search"
+                        >
+                        <button aria-label="Buscar" class="pokemon-search-button" id="pokemon-search-button" type="submit">
+                            <svg fill="none" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center" id="pokemon-grid"></div>
+
+        <nav aria-label="Paginação de Pokémon" class="mt-5">
+            <ul class="pagination justify-content-center mb-0" id="pokemon-pagination"></ul>
+        </nav>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
