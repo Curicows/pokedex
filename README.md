@@ -11,12 +11,9 @@ Aplicação web tipo Pokédex, consumindo a PokéAPI, com busca por nome e pagin
 
 ## Como executar
 
-Este projeto usa caminhos absolutos no HTML (`/css/...`, `/assets/...`, `/js/...`), então rode um servidor apontando para a raiz do repositório.
+Abra no navegador:
 
-1. Na pasta do projeto (`pokedex`), execute:
-   - `python -m http.server 8080`
-2. Abra no navegador:
-   - http://localhost:8080/
+- [https://curicows.github.io/pokedex/](https://curicows.github.io/pokedex/)
 
 ## Funcionalidades
 
